@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sole Chef | 주방 시스템 마스터클래스</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome 아이콘팩 (이미지가 안 떠도 시각적 요소를 보완) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-white break-keep">
+
+    <!-- NAVIGATION BAR -->
+    <header class="fixed top-0 left-0 w-full bg-slate-950/80 backdrop-blur-md border-b border-slate-900 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-2xl font-black tracking-tight text-white whitespace-nowrap">Sole <span class="text-emerald-500">Chef</span></a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-400">
+                <a href="#features" class="hover:text-white transition-colors whitespace-nowrap">문제 제기</a>
+                <a href="#value" class="hover:text-white transition-colors whitespace-nowrap">가치 제안</a>
+                <a href="#toolkit" class="hover:text-white transition-colors whitespace-nowrap">수강 혜택</a>
+                <a href="#diagnosis" class="hover:text-white transition-colors whitespace-nowrap">사전 진단</a>
+                <a href="#process" class="hover:text-white transition-colors whitespace-nowrap">정산 프로세스</a>
+            </nav>
+            <a href="#apply" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs md:text-sm font-bold px-5 py-2.5 rounded-full transition-all transform hover:-translate-y-0.5 whitespace-nowrap">사전 신청하기</a>
+        </div>
+    </header>
+
+    <!-- SECTION 1. HERO (상업용 주방 배경 섹션) -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-slate-950">
+        <!-- 배경 이미지 태그: 만약 이미지가 깨지면 어두운 그라데이션이 기본 작동합니다 -->
+        <div class="absolute inset-0 z-0">
+            <!-- 💡 나중에 다운로드한 깨끗한 상업용 주방 이미지 경로(예: images/commercial-kitchen.jpg)로 교체하세요 -->
+            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1600&q=80" 
+                 alt="Professional Commercial Restaurant Kitchen" 
+                 class="w-full h-full object-cover opacity-25"
+                 onerror="this.src='https://placehold.co/1600x900/020617/10b981?text=Clean+Commercial+Kitchen+Background'">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-950/80 to-slate-950 z-10"></div>
+        
+        <div class="relative max-w-5xl mx-auto px-6 text-center z-20 py-12">
+            <span class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-[11px] md:text-xs font-semibold bg-emerald-500/20 text-emerald-400 mb-6 border border-emerald-500/30 mx-auto backdrop-blur-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0"></span> The CIA • 쯔지(Tsuji) 등 명문 요리 엘리트 연합 싱크탱크
+            </span>
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white leading-[1.2] mb-6 drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
+                5시간 만에 재정립되는<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-500">주방 동선의 혁신</span>
+            </h1>
+            <p class="text-base md:text-xl text-slate-100 max-w-3xl mx-auto mb-10 leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]">
+                10년 경력의 1인 코스다이닝 오너 셰프와 세계적 명문 요리 대학 출신 전문가 집단이 설계한 오직 실전만을 위한 주방 정밀 진단 시스템. 불필요한 인건비와 동선 낭비를 완벽히 걷어냅니다.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#apply" class="w-full sm:w-auto bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold px-8 py-4 rounded-xl transition-all shadow-xl shadow-emerald-950/50 text-center">
+                    1:1 사전 진단 컨설팅 신청하기 (50분 / 48,000원)
+                </a>
+            </div>
+            <p class="text-xs text-slate-300 mt-4 drop-shadow-[0_1px_6px_rgba(0,0,0,0.95)]"><i class="fa-solid fa-shield-halved mr-1"></i> 본 과정 매칭 시 사전 진단 비용 100% 전액 환급 및 차감</p>
+        </div>
+    </section>
+
+    <!-- SECTION 2. PAIN POINTS -->
+    <section id="features" class="py-24 bg-slate-950 border-t border-slate-900 relative">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4 tracking-tight">혹시 당신의 주방도 이렇지 않습니까?</h2>
+                <p class="text-emerald-500 font-medium">"동선의 정리가 없는 노동은 시스템이 아니라 '노가다'일 뿐입니다."</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-900/40 backdrop-blur-sm border border-slate-900 p-8 rounded-2xl transition-all hover:border-slate-800">
+                    <div class="w-12 h-12 rounded-xl bg-red-500/10 text-red-400 flex items-center justify-center text-xl font-bold mb-6">01</div>
+                    <h3 class="text-xl font-bold text-white mb-3">피크 타임의 병목 현상</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">"주문이 몰리기만 하면 직원들의 동선이 꼬여 서로 부딪히고, 조리 및 서빙 시간은 끝없이 지연됩니다."</p>
+                </div>
+                <div class="bg-slate-900/40 backdrop-blur-sm border border-slate-900 p-8 rounded-2xl transition-all hover:border-slate-800">
+                    <div class="w-12 h-12 rounded-xl bg-red-500/10 text-red-400 flex items-center justify-center text-xl font-bold mb-6">02</div>
+                    <h3 class="text-xl font-bold text-white mb-3">브레이크 타임 없는 전처리</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">"장사 준비를 위해 누구보다 일찍 출근하지만, 효율적인 규격화 시스템이 없어 노동력과 시간이 줄줄 왭니다."</p>
+                </div>
+                <div class="bg-slate-900/40 backdrop-blur-sm border border-slate-800 p-8 rounded-2xl transition-all hover:border-slate-800">
+                    <div class="w-12 h-12 rounded-xl bg-red-500/10 text-red-400 flex items-center justify-center text-xl font-bold mb-6">03</div>
+                    <h3 class="text-xl font-bold text-white mb-3">반복되는 주방 장비 실패</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">"남들이 좋다는 비싼 장비를 들여놓았지만, 정작 우리 매장 구조와 메뉴 메커니즘에 맞지 않아 창고에 방치되어 있습니다."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3. SOLUTION & VALUE (The CIA 명문 셰프복 레이아웃 섹션) -->
+    <section id="value" class="relative py-32 overflow-hidden border-t border-b border-slate-900 bg-slate-950">
+        <!-- 배경 이미지 태그 -->
+        <div class="absolute inset-0 z-0">
+            <!-- 💡 나중에 다운로드한 정갈한 화이트 셰프복(Chef Uniform) 이미지 경로(예: images/cia-chef.jpg)로 교체하세요 -->
+            <img src="https://images.unsplash.com/photo-1577106263724-2c8e03bfe9cf?auto=format&fit=crop&w=1600&q=80" 
+                 alt="Professional Chef in White Uniform" 
+                 class="w-full h-full object-cover opacity-20"
+                 onerror="this.src='https://placehold.co/1600x900/020617/0f172a?text=The+CIA+Chef+Uniform+Concept'">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950 z-10"></div>
+        
+        <div class="relative max-w-4xl mx-auto px-6 text-center z-20">
+            <!-- 배지가 안보일 때를 대비해 상단에 셰프 조리복 아이콘 배치 -->
+            <div class="text-emerald-500 text-4xl mb-6"><i class="fa-solid fa-shirt"></i></div>
+            
+            <blockquote class="text-2xl md:text-3xl font-bold text-white leading-relaxed mb-8 tracking-tight drop-shadow-[0_4px_14px_rgba(0,0,0,1)]">
+                "이론만 앞서는 컨설턴트는 현장을 바꿀 수 없습니다.<br>
+                <span class="text-emerald-400">명문대 엘리트 학파의 집단 지성과 10년 실전 생존력이 만났습니다.</span>"
+            </blockquote>
+            <div class="text-slate-100 space-y-6 text-base md:text-lg leading-relaxed max-w-3xl mx-auto text-left md:text-center drop-shadow-[0_2px_10px_rgba(0,0,0,1)]">
+                <p>세계 최고 권위의 요리 학교인 <strong class="text-white font-semibold">The CIA 뉴욕 본교</strong>와 글로벌 탑티어 <strong class="text-white font-semibold">메리어트 호텔</strong> 출신의 오너 셰프, 그리고 일본 최고의 명문 <strong class="text-emerald-400 font-semibold">쯔지(Tsuji) 조리전문학교</strong>를 비롯한 글로벌 요리 엘리트 대학 출신의 전문가 집단이 당신의 주방을 위해 뭉쳤습니다.</p>
+                <p>우리는 책상 위에서 도면만 그리는 유령 컨설팅을 혐오합니다. 혼자서 장보기부터 즉석 코스 조리, 플레이팅까지 모든 프로세스를 완벽하게 통제해 온 <strong class="text-white font-semibold">10년 차 1인 다이닝 오너 셰프의 실전 데이터</strong>에, 엘리트 전문가 집단의 고정밀 검증 체계를 결합했습니다.</p>
+                <p>가장 완벽한 실전용 진단과 즉각적인 동선 해결책을 제시하는 국내 유일의 글로벌 스탠다드 솔루션. 수년 동안 현장에서 내구성과 효율성이 완벽히 검증된 전문 워크 장비와 소모품 패키지까지 아낌없이 제공합니다. 주방의 격을 단숨에 바꾸십시오.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4. INCLUDED TOOLKIT -->
+    <section id="toolkit" class="py-24 bg-slate-950 relative">
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            <div class="bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-emerald-500/5 rounded-full blur-3xl"></div>
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+                    <div class="space-y-4 max-w-2xl">
+                        <span class="inline-block text-xs font-bold text-emerald-400 bg-emerald-50/10 px-3 py-1 rounded-md border border-emerald-500/20 whitespace-nowrap">SPECIAL BENEFIT</span>
+                        <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight">🎁 몸만 오십시오. 나머지는 모두 준비되어 있습니다.</h2>
+                        <p class="text-sm font-semibold text-slate-300">[수강료 내 포함] 약 20만 원 상당의 프로페셔널 실무 패키지</p>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            "교육받을 땐 좋았는데 막상 내 주방에 오니 장비가 없다"며 실행을 미루거나 잘못된 기물을 사느라 돈 낭비하는 일을 원천 차단합니다. 10년 동안 무수한 기물을 고르고 부수며 살아남은 셰프의 고정밀 툴킷입니다.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-300 pt-2">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs shrink-0"></i> <span><strong>전문가용 주방 워크 장비 세트:</strong> 조리 효율성과 공간 동선을 극대화하기 위해 엄선한 핵심 툴킷</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs shrink-0"></i> <span><strong>실무 필수 소모품 패키지:</strong> 업장 전처리(Prep) 프로세스 규격화 및 위생적인 보관 시스템 용품 일체</span></li>
+                        </ul>
+                        <p class="text-xs text-slate-500 font-medium pt-2"><i class="fa-solid fa-circle-info mr-1"></i> 지급 방식: 본 과정(5시간 마스터클래스) 진행 당일 현장에서 전원 실물 제공 (추가 비용 없음)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5. PRE-CLASS DIAGNOSIS -->
+    <section id="diagnosis" class="relative py-24 bg-slate-900/20 border-t border-slate-900">
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-emerald-500 tracking-widest uppercase whitespace-nowrap">PRE-CLASS DIAGNOSIS</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-2 mb-4 tracking-tight">본 과정 매칭 전, 50분간의 프라이빗 사전 진단 컨설팅</h2>
+                <p class="text-slate-400 text-sm md:text-base leading-relaxed">
+                    본 마스터클래스는 무분별하게 수강 신청을 받지 않습니다. 공간의 한계와 메뉴의 메커니즘을 고려하여 실제로 시스템 혁신이 가능한 업장인지, <strong class="text-white">The CIA • 쯔지 등 명문 요리 대학 출신 전문가 집단</strong>의 정밀 스크리닝 메커니즘을 통해 완벽한 실전용 사전 진단을 제공합니다.
+                </p>
+                <div class="inline-flex flex-col sm:flex-row items-center bg-slate-900 border border-slate-800 rounded-xl px-6 py-3 mt-6 text-sm gap-2 sm:gap-0">
+                    <span class="text-slate-400 whitespace-nowrap">소요 시간 : <strong>50분 (유선 또는 Zoom 선택)</strong></span>
+                    <span class="hidden sm:inline mx-3 text-slate-700">|</span>
+                    <span class="text-white whitespace-nowrap">컨설팅 비용 : <strong class="text-emerald-400">48,000 KRW</strong></span>
+                </div>
+            </div>
+
+            <!-- Timeline Table -->
+            <div class="bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
+                <div class="p-6 bg-slate-900/50 border-b border-slate-800 font-bold text-white text-sm tracking-tight">⏱️ 50-Min Consultation Architecture (Elite Cross-Check)</div>
+                <div class="divide-y divide-slate-800">
+                    <div class="p-6 md:flex items-start justify-between gap-8">
+                        <div class="text-sm font-bold text-emerald-400 mb-2 md:mb-0 md:w-32 shrink-0 whitespace-nowrap">00:00 ~ 00:15</div>
+                        <div class="grow">
+                            <h4 class="text-base font-bold text-white mb-1">01. 엘리트 주방 환경 인터뷰</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">현재 업장 위치, 주방 도면 구조 파악 및 글로벌 호텔 스탠다드 기준의 기물 리스트 스크리닝</p>
+                        </div>
+                    </div>
+                    <div class="p-6 md:flex items-start justify-between gap-8">
+                        <div class="text-sm font-bold text-emerald-400 mb-2 md:mb-0 md:w-32 shrink-0 whitespace-nowrap">00:15 ~ 00:35</div>
+                        <div class="grow">
+                            <h4 class="text-base font-bold text-white mb-1">02. 1인 다이닝 베이스 동선 및 워크플로우 분석</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">즉석 코스 및 메인 메뉴 구성안 진단, 홀-주방 간의 구조적 병목 현상의 원인을 실전 관점에서 도출</p>
+                        </div>
+                    </div>
+                    <div class="p-6 md:flex items-start justify-between gap-8">
+                        <div class="text-sm font-bold text-emerald-400 mb-2 md:mb-0 md:w-32 shrink-0 whitespace-nowrap">00:35 ~ 00:50</div>
+                        <div class="grow">
+                            <h4 class="text-base font-bold text-white mb-1">03. 명문가 집단 지성 마스터플랜 가이드</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">5시간 본 마스터클래스 진행 시 개선 가능한 예상 효율 지표 및 완벽한 실전 맞춤형 해결책 제시</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6. RISK-FREE PROCESS -->
+    <section id="process" class="py-24 bg-slate-950 border-t border-slate-900">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4 tracking-tight">🛡️ 안심하고 신청하십시오.<br>위험 부담은 제 몫입니다.</h2>
+                <p class="text-slate-400 text-sm">사전 컨설팅부터 본 과정까지의 최종 정산 프로세스</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 relative">
+                <div class="bg-slate-900/40 border border-slate-900 p-5 rounded-xl text-center">
+                    <div class="text-xs font-bold text-emerald-400 mb-1 whitespace-nowrap">STEP 01</div>
+                    <p class="text-xs font-bold text-white mb-1 whitespace-nowrap">신청 및 결제</p>
+                    <p class="text-[11px] text-slate-500">1:1 사전 진단 비용 48,000원 입금</p>
+                </div>
+                <div class="bg-slate-900/40 border border-slate-900 p-5 rounded-xl text-center">
+                    <div class="text-xs font-bold text-emerald-400 mb-1 whitespace-nowrap">STEP 02</div>
+                    <p class="text-xs font-bold text-white mb-1 whitespace-nowrap">비대면 컨설팅</p>
+                    <p class="text-[11px] text-slate-500">50분간의 주방 구조/메뉴 분석</p>
+                </div>
+                <div class="bg-slate-900/40 border border-slate-900 p-5 rounded-xl text-center">
+                    <div class="text-xs font-bold text-emerald-400 mb-1 whitespace-nowrap">STEP 03</div>
+                    <p class="text-xs font-bold text-white mb-1 whitespace-nowrap">매칭 확정</p>
+                    <p class="text-[11px] text-slate-500">본 마스터클래스 진행 여부 최종 결정</p>
+                </div>
+                <div class="bg-slate-900/40 border border-slate-900 p-5 rounded-xl text-center">
+                    <div class="text-xs font-bold text-emerald-400 mb-1 whitespace-nowrap">STEP 04</div>
+                    <p class="text-xs font-bold text-white mb-1 whitespace-nowrap">100% 전액 환급</p>
+                    <p class="text-[11px] text-slate-500">본 과정 선금 입금 시 48,000원 전액 차감</p>
+                </div>
+                <div class="bg-slate-900/40 border border-slate-900 p-5 rounded-xl text-center border-emerald-500/30 bg-emerald-950/10 sm:col-span-2 md:col-span-1">
+                    <div class="text-xs font-bold text-emerald-400 mb-1 whitespace-nowrap">STEP 05</div>
+                    <p class="text-xs font-bold text-white mb-1 whitespace-nowrap">패키지 수령</p>
+                    <p class="text-[11px] text-slate-500">당일 20만 원 상당의 장비/소모품 지급</p>
+                </div>
+            </div>
+            <p class="text-center text-xs text-slate-500 mt-8">※ 사전 진단 이후 본 과정 진행이 부적합하다고 판단되거나 매칭이 안 될 경우, 사전 진단비 외에 어떠한 추가 지출도 발생하지 않습니다.</p>
+        </div>
+    </section>
+
+    <!-- SECTION 7. CTA LEAD FORM -->
+    <section id="apply" class="py-24 bg-slate-900/40 border-t border-slate-900">
+        <div class="max-w-xl mx-auto px-6">
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 shadow-2xl">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold text-white mb-2">사전 진단 컨설팅 신청서</h2>
+                    <p class="text-xs text-slate-400 leading-relaxed">무의미한 지출을 막고 심도 있는 컨설팅을 제공하기 위해<br>본 사전 세션은 매월 한정 인원으로만 제한 운영됩니다.</p>
+                </div>
+                
+                <form action="https://formspree.io/f/your_formspree_id" method="POST" class="space-y-5">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 whitespace-nowrap">성함 (대표자명)</label>
+                        <input type="text" name="name" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors" placeholder="홍길동">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 whitespace-nowrap">연락처</label>
+                        <input type="tel" name="phone" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors" placeholder="010-0000-0000">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 whitespace-nowrap">현재 업장 상태</label>
+                        <div class="grid grid-cols-3 gap-3">
+                            <label class="bg-slate-950 border border-slate-800 rounded-xl py-3 text-center text-xs text-slate-400 font-medium cursor-pointer has-[:checked]:border-emerald-500 has-[:checked]:text-white transition-all block whitespace-nowrap">
+                                <input type="radio" name="status" value="운영 중" class="sr-only" checked> 운영 중
+                            </label>
+                            <label class="bg-slate-950 border border-slate-800 rounded-xl py-3 text-center text-xs text-slate-400 font-medium cursor-pointer has-[:checked]:border-emerald-500 aspires-[:checked]:text-white transition-all block whitespace-nowrap">
+                                <input type="radio" name="status" value="3개월 이내 창업 예정" class="sr-only"> 창업 예정
+                            </label>
+                            <label class="bg-slate-950 border border-slate-800 rounded-xl py-3 text-center text-xs text-slate-400 font-medium cursor-pointer has-[:checked]:border-emerald-500 has-[:checked]:text-white transition-all block whitespace-nowrap">
+                                <input type="radio" name="status" value="구상 단계" class="sr-only"> 구상 단계
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 whitespace-nowrap">희망 상담 방식</label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <label class="bg-slate-950 border border-slate-800 rounded-xl py-3 text-center text-xs text-slate-400 font-medium cursor-pointer has-[:checked]:border-emerald-500 has-[:checked]:text-white transition-all block whitespace-nowrap">
+                                <input type="radio" name="type" value="유선 전화" class="sr-only" checked> 유선 전화
+                            </label>
+                            <label class="bg-slate-950 border border-slate-800 rounded-xl py-3 text-center text-xs text-slate-400 font-medium cursor-pointer has-[:checked]:border-emerald-500 has-[:checked]:text-white transition-all block whitespace-nowrap">
+                                <input type="radio" name="type" value="Zoom 영상 통화" class="sr-only"> Zoom 영상 통화
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 whitespace-nowrap">입금자명 (성함과 다를 경우)</label>
+                        <input type="text" name="depositor" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors" placeholder="미입력 시 신청자명과 동일">
+                    </div>
+
+                    <!-- 무통장 입금 안내 박스 -->
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 text-xs space-y-2 text-slate-400">
+                        <p class="font-bold text-white text-sm flex items-center justify-between">
+                            <span class="whitespace-nowrap">💸 무통장 입금 안내</span>
+                            <span class="text-emerald-400 whitespace-nowrap">48,000 KRW</span>
+                        </p>
+                        <div class="bg-slate-900 p-3 rounded-lg font-mono text-slate-300 select-all border border-slate-800/50">
+                            [은행명 입력] [계좌번호 입력]<br>예금주: [예금주명 혹은 상호명 입력]
+                        </div>
+                        <p class="text-[11px] leading-relaxed text-slate-500"><i class="fa-solid fa-clock mr-1"></i> 신청서 제출 후 2시간 이내에 입금이 확인되면, 등록하신 연락처로 직접 전화를 드려 1:1 일정을 조율합니다.</p>
+                    </div>
+
+                    <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-emerald-950/50 text-sm whitespace-nowrap">
+                        🔗 주방 시스템 사전 진단 신청하기
+                    </button>
+                    <p class="text-[11px] text-slate-500 text-center">모든 신청서 양식 및 상담 데이터는 안전하게 보호되며 <strong>Sole Chef</strong> 담당자 계정(uklife@gmail.com)으로 즉시 접수됩니다.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8. FAQ -->
+    <section class="py-24 bg-slate-950 border-t border-slate-900">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-center text-2xl md:text-3xl font-extrabold text-white mb-12 tracking-tight">자주 묻는 질문 (FAQ)</h2>
+            <div class="space-y-4">
+                <details class="group bg-slate-900 border border-slate-800 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 cursor-pointer focus:outline-none">
+                        <span class="text-sm md:text-base font-bold text-white">Q. 아직 창업 전인데 사전 진단을 받아도 되나요?</span>
+                        <span class="ml-1.5 shrink-0 rounded-full bg-slate-800 p-1.5 text-slate-400 group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down text-xs"></i></span>
+                    </summary>
+                    <div class="p-5 border-t border-slate-800/50 text-sm text-slate-400 leading-relaxed">
+                        A. 네, 가능합니다. 단, 구체적인 메뉴 구성안이나 주방 인테리어 레이아웃(도면)이 준비되어 있는 3개월 이내 예비 오너분들에게 가장 효과적입니다.
+                    </div>
+                </details>
+                <details class="group bg-slate-900 border border-slate-800 rounded-xl [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 cursor-pointer focus:outline-none">
+                        <span class="text-sm md:text-base font-bold text-white">Q. 사전 진단만 받고 본 과정을 안 들어도 되나요?</span>
+                        <span class="ml-1.5 shrink-0 rounded-full bg-slate-800 p-1.5 text-slate-400 group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down text-xs"></i></span>
+                    </summary>
+                    <div class="p-5 border-t border-slate-800/50 text-sm text-slate-400 leading-relaxed">
+                        A. 물론입니다. 사전 진단 50분 동안 현재 주방 구조의 핵심 문제점을 명확히 짚어드리므로, 이 진단 자체만으로도 동선 개선에 큰 힌트를 얻어가실 수 있습니다.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-12 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-6 space-y-3">
+            <p class="text-sm font-bold text-slate-400 whitespace-nowrap">Sole Chef 주방 시스템 마스터클래스</p>
+            <p>신청 및 비즈니스 문의 : <a href="mailto:uklife@gmail.com" class="text-slate-400 hover:underline">uklife@gmail.com</a></p>
+            <p class="pt-4">Copyright &copy; 2026 Sole Chef. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
